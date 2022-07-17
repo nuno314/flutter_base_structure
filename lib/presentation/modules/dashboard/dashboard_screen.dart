@@ -30,7 +30,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'You have pushed the button this many times:',
+              'You have pushed the button this many times:a',
             ),
             Text('$_counter', style: Theme.of(context).textTheme.headline4),
             const InputContainer(),

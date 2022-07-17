@@ -11,6 +11,8 @@ import '../common_bloc/app_data_bloc.dart';
 import '../common_widget/text_scale_fixed.dart';
 import '../route/route.dart';
 import '../theme/theme_data.dart';
+import 'contact/bloc/contact_bloc.dart';
+import 'contact/views/contact_list_screen.dart';
 import 'welcome/splash/bloc/splash_bloc.dart';
 import 'welcome/splash/splash_screen.dart';
 
@@ -51,8 +53,8 @@ class _MyAppState extends State<App> {
             locale: appData?.locale ?? AppLocale.vi,
             onGenerateRoute: RouteGenerator.generateRoute,
             home: BlocProvider(
-              create: (_) => SplashBloc(),
-              child: SplashScreen(),
+              create: (_) => ContactBloc(),
+              child: const ContactListScreen(),
             ),
             navigatorObservers: [myNavigatorObserver],
             builder: EasyLoading.init(

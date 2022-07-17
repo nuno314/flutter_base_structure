@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
 import '../common_widget/text_scale_fixed.dart';
+import '../modules/contact/contact_list_route.dart';
 import '../modules/dashboard/dashboard_route.dart';
 import '../modules/log_viewer/log_viewer_route.dart';
 import '../modules/webview/webview_route.dart';
@@ -12,6 +13,7 @@ class RouteGenerator {
         ...DashboardRoute.getAll(settings),
         ...LogViewerRoute.getAll(settings),
         ...WebviewRoute.getAll(settings),
+        ...ContactListRoute.getAll(settings),
       };
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
